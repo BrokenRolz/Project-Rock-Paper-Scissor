@@ -12,10 +12,11 @@ let userScore = 0
 
 possibleChoice.forEach(possibleChoice => possibleChoice.addEventListener('click',(e) => {
    userChoice = e.target.id
-   userChoiceDisplay.innerHTML = userChoice 
+   userChoiceDisplay.innerHTML = userChoice.charAt(0).toUpperCase() + userChoice.slice(1)
    getComputerChoice()
    getResult()
    score()
+   // playRound()
 }))
 
 //random computer choice 
@@ -31,7 +32,7 @@ function getComputerChoice() {
    if (randomNum === 3){
       computerChoice = "scissor"
    }
-   computerChoiceDisplay.innerHTML = computerChoice
+   computerChoiceDisplay.innerHTML = computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)
 }
 
 // result and scores
@@ -57,3 +58,14 @@ function getResult() {
    computerScoreDisplay.innerHTML = computerScore
    userScoreDisplay.innerHTML = userScore
 }
+
+// function playRound() {
+//    if (computerScore === 3 && userScore < 3){
+//       result = "Game Over! You lost the game.";
+//       return computerScore == 0 && userScore == 0
+//    }
+//    if (userScore === 3 && computerScore < 3){
+//       result = "Game Over! You won the game.";
+//       return computerScore == 0 && userScore == 0
+//    }
+// }
