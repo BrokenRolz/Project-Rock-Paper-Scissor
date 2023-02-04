@@ -16,7 +16,6 @@ possibleChoice.forEach(possibleChoice => possibleChoice.addEventListener('click'
    getComputerChoice()
    getResult()
    score()
-   // playRound()
 }))
 
 //random computer choice 
@@ -54,18 +53,18 @@ function getResult() {
    ){result = "You Won";
       userScore = ++userScore
    }
+   // Trying to reset score to 0/ restart the game when either player or computer score reaches 3,
+   // but its not working yet.
+   if (computerScore == 3){
+      result = "Game Over! You lost the game.";
+      // computerScore == 0 && userScore == 0
+   }
+   if (userScore == 3){
+      result = "Game Over! You won the game.";
+      // computerScore == 0 && userScore == 0
+   }
    resultDisplay.innerHTML = result
    computerScoreDisplay.innerHTML = computerScore
    userScoreDisplay.innerHTML = userScore
 }
 
-// function playRound() {
-//    if (computerScore === 3 && userScore < 3){
-//       result = "Game Over! You lost the game.";
-//       return computerScore == 0 && userScore == 0
-//    }
-//    if (userScore === 3 && computerScore < 3){
-//       result = "Game Over! You won the game.";
-//       return computerScore == 0 && userScore == 0
-//    }
-// }
