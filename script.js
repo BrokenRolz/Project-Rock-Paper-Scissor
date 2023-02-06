@@ -26,7 +26,7 @@ function getComputerChoice() {
    if (randomNum === 1){
       computerChoice = "rock"
    }
-   if (randomNum === 21){
+   if (randomNum === 2){
       computerChoice = "paper"
    }
    if (randomNum === 3){
