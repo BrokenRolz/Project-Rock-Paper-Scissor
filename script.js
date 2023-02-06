@@ -55,10 +55,14 @@ function getResult() {
    // Trying to reset score to 0/ restart the game when either player or computer score reaches 3,
    // but its not working yet.
    if (computerScore === 3){
-      alert("Game Over! You lost the game.")
+      setTimeout(function() {
+         alert("Game Over! You lost the game.");
+      }, 10);
       // computerScore == 0 && userScore == 0
    }else if(userScore === 3){
-      alert("Game Over! You won the game.")
+      setTimeout(function() {
+         alert("Game Over! You won the game.");
+      }, 10);
       // computerScore == 0 && userScore == 0
    }
    resultDisplay.innerHTML = result
